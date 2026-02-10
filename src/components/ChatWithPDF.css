@@ -1,0 +1,113 @@
+/* ChatWithPDF.css */
+
+/* Container général */
+.chat-container {
+    max-width: 600px;
+    margin: 2rem auto;
+    background: #f9fafb;
+    border-radius: 1rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  /* En‑tête du chat */
+  .chat-header {
+    background: #2563eb;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .chat-header h2 {
+    font-size: 1.125rem;
+    margin: 0;
+  }
+  .chat-header button {
+    background: #f87171;
+    color: #fff;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .chat-header button:hover {
+    background: #ef4444;
+  }
+  
+  /* Zone de messages */
+  .chat-messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #fff;
+  }
+  .chat-msg {
+    max-width: 75%;
+    padding: 0.6rem 0.9rem;
+    margin-bottom: 0.75rem;
+    border-radius: 0.75rem;
+    line-height: 1.4;
+    word-break: break-word;
+    position: relative;
+  }
+  .chat-msg.user {
+    background: #e0f2fe;
+    align-self: flex-start;
+    border-top-left-radius: 0.25rem;
+  }
+  .chat-msg.bot {
+    background: #dcfce7;
+    align-self: flex-end;
+    border-top-right-radius: 0.25rem;
+  }
+  
+  /* Barre de saisie */
+  .chat-input {
+    display: flex;
+    border-top: 1px solid #e5e7eb;
+    background: #fff;
+  }
+  .chat-input textarea {
+    flex: 1;
+    padding: 0.75rem;
+    border: none;
+    resize: none;
+    font-size: 0.95rem;
+    line-height: 1.4;
+  }
+  .chat-input textarea:focus {
+    outline: none;
+  }
+  .chat-input button {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 0 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .chat-input button:disabled {
+    background: #93c5fd;
+    cursor: not-allowed;
+  }
+  .chat-input button:hover:not(:disabled) {
+    background: #1e40af;
+  }
+  
+  /* Scrollbar personnalisée */
+  .chat-messages::-webkit-scrollbar {
+    width: 6px;
+  }
+  .chat-messages::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  .chat-messages::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.2);
+    border-radius: 3px;
+  }
+  
